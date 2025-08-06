@@ -1,0 +1,650 @@
+<html>
+    <head>
+        <title>Gallery Of Mine</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <style>
+
+       body {
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            box-sizing: border-box;
+            }
+
+      #intro{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(0, 2, 31);
+            height:120vh;
+            }
+
+      #logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 80vh;
+            padding-top: 30px;
+            color: white;
+            font-size:2em;
+            }
+
+
+
+      #pics {
+            display: flex;
+            gap: 20px;
+            padding:10px 30px;
+            }
+
+     .albums {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow:hidden;
+            border: 3px solid rgb(255, 255, 255);
+            
+            }
+
+      .albums img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.9s ease;
+            
+            }
+
+      .albums:hover img {
+            transform: rotate(360deg);
+            }
+            
+      .text {
+            position: absolute;
+            bottom:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 9, 39, 0.685);
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 1s;
+            transform: translateY(-100%);
+            }
+
+      .albums:hover .text {
+            transform: translateY(0);
+            }
+
+      #myclicks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 210vh;
+            padding-top:10px;
+            color: white;
+            font-size: 2em;
+            background-color:#00242d;
+            text-align: center;
+            
+           }
+
+          
+
+      .pg-1 {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           column-gap: 30px;
+    
+           }
+
+      .pg-1 img {
+           position: relative;
+           border: 3px solid rgb(255, 255, 255);
+           transition: transform 0.6s ease;
+         
+           }
+
+       .pg-2 {
+           display: grid;
+           grid-template-columns: repeat(4, 1fr);
+          
+           row-gap: 20px;align-items: center;
+           border-radius: 30px;
+           }
+
+     .pg-2 img {
+          
+           border-radius:0;
+           transition: transform 0.6s ease;
+           transform: rotate(3deg);
+           
+
+           }
+
+      .pg-1 img:hover,.pg-2 img:hover {
+            z-index: 2;
+            border-style:groove;           
+            transform: scale(1.1);
+            border-radius:none;
+             
+
+             
+      }
+     .pg-2 img:hover {
+      border-radius: 20px;
+     }
+    
+
+     
+    
+        @keyframes glow {
+           0%, 100% {
+           box-shadow: 0 0 10px rgb(161, 233, 241);
+           }
+        60% {
+           box-shadow: 0 0 30px rgb(150, 183, 220);
+           }
+            }
+        
+        .pg-1 img:hover, .pg-2 img:hover{
+        animation: glow 3s infinite;
+        }
+
+        #myarts {
+            display: flex;
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color:rgb(23, 1, 37);
+            flex-direction: column;
+            
+            }
+        #arts-2 {
+              grid-template-columns: repeat(3, 1fr);
+              justify-items: center;
+              display: grid;
+              row-gap:15px;
+              column-gap:15px;
+              grid-column: auto;
+              
+        }
+    
+        .card {
+            width: 200px;
+            height: 250px;
+            perspective: 1000px;
+             
+            }
+
+        .parent {
+           width: 100%;
+           height: 100%;
+           position: relative;
+           transition: transform 1s;
+           transform-style: preserve-3d;
+           
+           }
+
+        .card:hover .parent {
+           transform: rotateY(180deg);
+           }
+
+        .front,.back {
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           backface-visibility: hidden;
+           }
+
+        .front{
+             border: 3px solid #3dbfef;
+           }
+
+
+        .back {
+            background: linear-gradient(rgb(0, 0, 0),blue,black);
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotateY(180deg);
+            border-color: 3px solid rgb(230, 95, 23);
+            border-style:dashed;
+            border-radius:20px;
+            }
+
+        #art1 { 
+            top:120; 
+            position :relative;
+        }
+        #art3{
+            top:120; 
+            position: relative;
+        }
+
+         #art4{ 
+           
+            left:-215px;
+            position :relative;
+        }
+
+         #art6 { 
+           
+            right:-215px;
+            position :relative;
+        }
+
+        #art7 { 
+            top:-145px; 
+            position :relative;
+        }
+       
+         #art9 { 
+            top:-145px; 
+            position :relative;
+        }
+    
+        #travel {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           background-color:#405D72;
+           color: rgb(214, 221, 227);
+           font-size: 2em;
+           text-align: center;
+           padding: 10px;
+           }
+
+        #travel-2 {
+           display: grid;
+            grid-template-columns: repeat(2, 1fr);
+           justify-items: center;
+           column-gap:30px;
+           row-gap: 10px;
+           
+           }
+
+        .travel-3{
+            
+            position: relative;
+            gap:0;
+            align-items: center;
+            transform: rotate(-10deg);
+             
+          }
+
+        .travel-3 #t1:hover,.travel-3 #t2:hover,.travel-3 #t3:hover,.travel-3 #t4:hover{
+            border:2px solid rgb(255, 255, 255);
+           
+        }
+
+        #t1, #t2, #t3, #t4 {
+           border-radius: 15px;
+           transform:rotate(0deg);
+          }
+
+       .text-slide {
+          opacity: 0;
+          transition: transform 0.5s ease, opacity 0.5s ease;
+          background: rgba(51, 52, 53, 0.521);
+          text-align: center;
+          white-space: nowrap;
+         
+          
+         }
+
+        .t1-text ,.t3-text{
+          margin-right: 15px;
+          transform: translateX(-250px);
+        }
+
+        .travel-3:hover .t1-text ,#t1,#t3, .travel-3:hover .t3-text{
+         transform: translateX(0);
+         opacity: 1;
+          animation: glow 3s infinite;
+        }
+
+
+         .t2-text,.t4-text {
+         margin-left: 15px;
+         transform: translateX(250px);
+        }
+        .travel-3:hover .t2-text,#t2,#t4, .travel-3:hover .t4-text {
+        transform: translateX(0);
+         animation: glow 3s infinite;
+        opacity: 1;
+        }
+
+         @keyframes glow {
+           0%, 100% {
+           box-shadow: 0 0 10px rgb(255, 255, 255);
+           }
+        60% {
+           box-shadow: 0 0 30px rgb(145, 194, 239);
+           }
+            }
+         #footer{
+            background-color: bisque;
+            font-size:22px;
+         }
+          button{
+        border-radius:5px;
+        font-size:19px;
+        background-color:#c3ccf0 ;
+        color:rgba(243, 22, 99, 0.95);
+        cursor:pointer;
+        height: 29px;
+        border:2px solid rgb(255, 255, 255);  
+        align-items:center;
+        justify-content: center;
+       
+    }
+
+    button:hover {
+        background-color:#010927;
+        color:white; 
+    }
+
+        
+
+    </style>
+
+    <body>
+
+    
+           <div id="intro">
+
+                <div id="logo">
+
+                  <img src="logo.png" width="260" height="200" id="top"><br>
+                   <p><i>Moments That Speak Without Words.....</i></p>
+
+                <div id="pics">
+
+                    <div class="albums">
+                       <img src="img1.jpg" width="300">
+                       <div class="text">✦ Timeless Clicks </div>
+                    </div>
+
+                    <div class="albums">
+                        <img src="img2.jpg" width="300">
+                        <div class="text">✦ Soulful Colors</div>
+                    </div>
+
+                    <div class="albums">
+                        <img src="img3.jpg" width="300">
+                        <div class="text">✦ Endless Exploring</div>
+                    </div>
+
+                </div>
+
+                   <div>
+
+                   <marquee>
+                    <p ><i>
+                     <span style="color:snow">⮘⮘⮘ Exploring my creative side through photography.... </span>
+                    <span style="color:rgb(243, 141, 250)">⮘⮘⮘ Expressing myself through painting arts....⮘⮘⮘</span>
+                    <span style="color:rgb(198, 231, 255)"> Experiencing new cultures through travel.....⮘⮘⮘</span>
+                    </i></p>
+                    </marquee>
+
+                    </div>
+
+                </div>
+                 
+            </div>
+
+
+            <div id="myclicks" >
+
+                <div id="a">
+                <div id="nature1">
+
+                    <p style="font-size:48px;font-family:Georgia, ">✦ Timeless Clicks ✦ </p>
+                    
+                    <p style="font-family:Georgia">Nature’s Poetry—<span style="color:rgb(255, 213, 0)"><i>Where Moments Become Memories....</i></span></p>
+                </div>
+
+                <div class="pg-1">
+
+                    <img id="p1" src="p1.jpg" width="250" height="200" style="border-top-left-radius:50px;
+                    border-bottom-right-radius: 50px;">
+
+                    <img id="p2" src="p2.jpg" width="250" height="200"
+                    style="border-bottom-right-radius:50px;border-top-left-radius: 50px;">
+
+                    <img id="p2" src="p3.jpg" width="250" height="200"
+                    style="border-bottom-right-radius:50px;border-top-left-radius: 50px;">
+
+
+                    <img id="p4" src="p4.jpg" width="250" height="200" 
+                    style="border-bottom-right-radius:50px;border-top-left-radius: 50px;">
+
+                </div>
+
+                <div id="nature2">
+                    <p style="font-family:Georgia">Petal Portraits—<span style="color:rgb(255, 238, 0)"><i>Moments That Bloom Forever....</i></span></p>
+                    
+                </div>
+
+                <div class="pg-2" style="align-items:center">
+
+                    <img id="p5" src="p5.jpg" width="230" height="210">
+                    <img id="p6" src="p6.jpg" width="230" height="210">
+                    <img id="p7" src="p7.jpg" width="230" height="210">
+                    <img id="p8" src="p8.jpg" width="230" height="210">
+                    <img id="p9" src="p9.jpg" width="230" height="210">
+                    <img id="p10" src="p10.jpg" width="230" height="210">
+                    <img id="p11" src="p11.jpg" width="230" height="210">
+                    <img id="p12" src="p12.jpg" width="230" height="210">
+                    <img id="p13" src="p13.jpg" width="230" height="210">
+                    <img id="p14" src="p14.jpg" width="230" height="210">
+                    <img id="p15" src="p15.jpg" width="230" height="210">
+                    <img id="p16" src="p16.jpg" width="230" height="210">
+
+                </div>
+
+            </div>
+            </div>
+            
+           
+           
+
+       <div id="myarts">
+            <div id="arts-1">
+                <p style="font-size:48px;font-family:Georgia">✦ Soulful Colors ✦ </p>
+                <p ><i>Where Color Meets The Soul....</i></p>
+            
+
+        <div id="arts-2">
+            <div class="card">
+                <div id="art1">
+                <div class="parent">
+                    <div class="front">
+                        <img src="art1.jpg" width="200" height="250">
+                    </div>
+                    <div class="back">
+                        <h4>Buddha Art</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div id="art2">
+                <div class="parent">
+                    <div class="front">
+                        <img src="art2.jpg" width="200" height="250">
+                    </div>
+                    <div class="back">
+                        <h4>Durga Painting</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div id="art3">
+                <div class="parent">
+                    <div class="front">
+                        <img src="art3.jpg" width="200" height="250">
+                    </div>
+                    <div class="back">
+                        <h4>Madhubani Art</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div id="art4">
+                <div class="parent">
+                    <div class="front">
+                        <img src="art4.jpg" width="200" height="250">
+                    </div>
+                    <div class="back">
+                        <h4>Classical Dance</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div id="art5">
+                <div class="parent">
+                    <div class="front">
+                        <img src="art5.jpg" width="200" height="250">
+                    </div>
+                    <div class="back">
+                        <h4> Canva Art</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div id="art6">
+                <div class="parent">
+                    <div class="front">
+                        <img src="art6.jpg" width="200" height="250">
+                    </div>
+                    <div class="back">
+                        <h4>Kuchipudi</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div id="art7">
+                <div class="parent">
+                    <div class="front">
+                        <img src="art7.jpg" width="200" height="250">
+                    </div>
+                    <div class="back">
+                        <h4>Little Girl</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div id="art8">
+                <div class="parent">
+                    <div class="front">
+                        <img src="art8.jpg" width="200" height="250">
+                    </div>
+                    <div class="back">
+                        <h4>Kali Painting</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div id="art9">
+                <div class="parent">
+                    <div class="front">
+                        <img src="art9.jpg" width="200" height="250">
+                    </div>
+                    <div class="back">
+                        <h4>Mandal Art</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <br>
+        </div>
+
+      <div id="travel">
+           <div id="travel-1">
+                <p style="font-size:48px;font-family:Georgia">✦ Endless Exploring ✦</p>
+                <p><i>Where Every Journey Becomes A Story....</i></p>
+
+           <div id="travel-2">
+
+            <div class="travel-3" style="padding-top:10px">
+                <img src="travel1.jpg" width="300" height="200" id="t1">
+                <div class="text-slide t1-text">Sacred Pulse of Divinity</div>
+            </div>
+
+            <div class="travel-3" style="padding-top:10px">
+                <img src="travel2.jpg" width="300" height="200" id="t2">
+                <div class="text-slide t2-text">Echoes of Dharma</div>
+            </div>
+
+            <div class="travel-3">
+                <img src="travel3.jpg" width="300" height="200" id="t3">
+                <div class="text-slide t3-text">Wheels of Faith</div>
+            </div>
+
+            <div class="travel-3" style="padding-bottom:30px">
+                <img src="travel4.jpg" width="300" height="200" id="t4">
+                <div class="text-slide t4-text">Grace Beyond Hills</div>
+            </div>
+
+            </div>
+
+        </div>
+        
+      </div>
+   
+
+      <div id="footer">
+        <marquee>
+            <p>© 2025 Colors of My Soul-<i>Crafted with light, memory, and quiet wonder</i>—Vijaya Sri ✦✦✦</p>
+
+        </marquee>
+         <center>
+
+                <a href="#top"> 
+          
+                  <button  id="button">
+
+                    <b>Go To Top</b>
+
+                 </button>
+
+                </a>
+
+              </center>
+        
+
+      </div>
+
+  
+    </body>
+</html>
+
+
+ 
